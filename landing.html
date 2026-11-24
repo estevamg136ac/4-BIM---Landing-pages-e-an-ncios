@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Peneira Vôlei Sub-17 Masculino | Time GMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lp-body">
+    <main class="lp-container">
+        <section class="lp-hero">
+            <span class="badge">SELETIVA 2026 • CATEGORIA SUB-17</span>
+            <h1>Mostre seu Talento na Quadra pelo Time GMC</h1>
+            <p class="subtitle">Estamos selecionando atletas nascidos entre 2009 e 2010 para compor a equipe masculina Sub-17 nas competições da temporada.</p>
+            
+            <ul class="benefits">
+                <li>🏐 Avaliação técnica e tática com a comissão do GMC</li>
+                <li>🏆 Vagas para disputa dos campeonatos regionais</li>
+                <li>📋 Inscrição 100% gratuita (vagas limitadas por posição)</li>
+            </ul>
+        </section>
+
+        <section class="lp-form-box">
+            <h2>Ficha de Inscrição do Atleta</h2>
+            <form id="leadForm" novalidate>
+                <div class="input-group">
+                    <label for="nome">Nome Completo do Atleta *</label>
+                    <input type="text" id="nome" placeholder="Ex: Lucas Oliveira" required>
+                    <small class="error-msg" id="erroNome"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail (Atleta ou Responsável) *</label>
+                    <input type="email" id="email" placeholder="Ex: lucas@email.com" required>
+                    <small class="error-msg" id="erroEmail"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="whatsapp">WhatsApp para Contato *</label>
+                    <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" maxlength="15" required>
+                    <small class="error-msg" id="erroWhats"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="posicao">Posição Principal *</label>
+                    <select id="posicao" required>
+                        <option value="">Selecione sua posição...</option>
+                        <option value="Levantador">Levantador</option>
+                        <option value="Ponteiro">Ponteiro</option>
+                        <option value="Oposto">Oposto</option>
+                        <option value="Central">Central</option>
+                        <option value="Líbero">Líbero</option>
+                    </select>
+                    <small class="error-msg" id="erroPosicao"></small>
+                </div>
+
+                <!-- Campo oculto para guardar de qual anúncio o atleta veio -->
+                <input type="hidden" id="origemLead" name="origem">
+
+                <button type="submit" class="btn-submit">GARANTIR MINHA VAGA NA PENEIRA</button>
+                <p class="privacy-note">⚠️ Obrigatório levar RG original e traje esportivo no dia do teste.</p>
+            </form>
+
+            <!-- Mensagem de Sucesso (Oculta inicialmente) -->
+            <div id="successBox" class="success-box hidden">
+                <h3>🏐 Inscrição Confirmada, <span id="userNameSuccess"></span>!</h3>
+                <p>Sua pré-inscrição para a <strong>Peneira Sub-17 Masculina do GMC</strong> foi registrada. Enviamos a data, local e horário para o seu e-mail e WhatsApp.</p>
+                <a href="index.html" class="btn-back">Voltar ao Portal</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
